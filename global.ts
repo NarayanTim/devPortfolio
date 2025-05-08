@@ -1,4 +1,4 @@
-const isProduction:boolean = false
+const isProduction:boolean = true
 const gitPath = "/devPortfolio"
 
 export const getPath = () : string => {
