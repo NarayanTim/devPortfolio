@@ -2,11 +2,11 @@
 import React from 'react';
 import { Float, useGLTF } from '@react-three/drei';
 import { LogoPosition, GLTFModel } from './LogoType';
-
+import { getPath } from '@/global';
 
 
 const ReactLogo = (props:LogoPosition) => {
-  const { nodes, materials } = useGLTF('/models/reactLogo.glb') as unknown as GLTFModel;
+  const { nodes, materials } = useGLTF(`${getPath()}/models/reactLogo.glb`) as unknown as GLTFModel;
 
   return (
     <Float  floatIntensity={5}>

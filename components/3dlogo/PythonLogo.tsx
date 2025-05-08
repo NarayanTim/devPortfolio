@@ -6,11 +6,12 @@ import * as THREE from 'three';
 import gsap from "gsap"
 import { useGSAP } from '@gsap/react';
 import { LogoPosition, GLTFModel } from "./LogoType"
+import { getPath } from '@/global';
 
 
 const PythonLogo = (props:LogoPosition) => {
     const pythonLogoRef = useRef<THREE.Mesh>(null)
-    const { nodes, materials } = useGLTF('/models/python.glb') as unknown as GLTFModel
+    const { nodes, materials } = useGLTF(`${getPath()}/models/python.glb`) as unknown as GLTFModel
 
     useEffect(() => {
         const material = materials.Python  as THREE.MeshStandardMaterial;

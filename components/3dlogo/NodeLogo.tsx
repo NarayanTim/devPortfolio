@@ -5,10 +5,11 @@ import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import gsap from "gsap"
 import { LogoPosition, GLTFModel } from "./LogoType"
+import { getPath } from '@/global';
 
 const NodeLogo =(props:LogoPosition) => {
     const logoRef = useRef<THREE.Mesh>(null)
-    const { nodes, materials } = useGLTF('/models/node.glb') as unknown as GLTFModel
+    const { nodes, materials } = useGLTF(`${getPath()}/models/node.glb`) as unknown as GLTFModel
 
 
     useEffect(() => {
