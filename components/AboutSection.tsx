@@ -1,6 +1,8 @@
 import React from 'react'
 import { aboutMeData } from "../data/index"
 import AboutData from './AboutData';
+import { getPath } from '@/global';
+
 
 const AboutSection = () => {
     return (
@@ -15,7 +17,7 @@ const AboutSection = () => {
                     <a href="#contact" className="btn btn-contact">
                         Contact
                     </a>
-                    <a target='_' href="Download" className="btn btn-download">
+                    <a title="Download Resume" href={`${getPath()}/resume.pdf`} target='_' className="btn btn-download">
                         Download
                     </a>
                 </div>
