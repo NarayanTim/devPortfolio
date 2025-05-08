@@ -1,26 +1,395 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  /* Core Theme Colors */
+  --color-background: #0A0A0C;          /* Deep black background */
+  
+  --color-surface: #1A1A1D;
+  
+  --color-hover-bg: #1D262D
+  --color-primary: #00FFE7;             /* Vibrant neon cyan */
+  --color-secondary: #FF4D00;           /* Bright alert orange */
+  
+  --color-highlight: #F9FF6E;           /* Electric yellow highlight */
+  --color-textMain: #E0E0E0;            /* Soft light gray for main text */
+  --color-textLink: #A0F6FF;            /* Icy blue link color */
+  --color-border: #1F1F24;              /* Subtle dark border color */
+  
+  --color-soft-teal: #8FD1D7; 
+  
+  --color-soft-teal-dark: #5F9D9C;
+  --color-soft-white: #F7F7F7;
+  --color-warm-white: #FAF9F6;
+  --color-cool-white: #E8F0F2;
+  --color-nav-hover-red: #CC1B1B;
+
+  /* Accent Gradient */
+  /* Neon cyan to purple */
+  --gradient: linear-gradient(135deg, #00FFE7, #BC13FE);
+
+  /* Buttons & UI */
+  --btn-text-color: #ffffff;            /* Crisp white text */
+  --btn-shadow: 0 4px 20px rgba(0, 255, 231, 0.3);       /* Subtle neon glow */
+  --btn-hover-shadow: 0 6px 24px rgba(255, 77, 0, 0.5);  /* Stronger orange glow */
+    
+    
+    
+    /* Animations */
+    --animate-fade-in: fade-in 0.7s ease-out forwards;
+    --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+    --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+    --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+    --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   }
+  
+
+
+  .canvas-loader {
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    animation: mulShdSpin 1.1s infinite ease;
+    transform: translateZ(0);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+
+
+  html, body {
+    scroll-behavior: smooth;
+    background-color: var(--color-background);
+    color: var(--color-textMain);
+    overflow-y : auto;
+    overflow-x: hidden;
+  }
+  
+
+  .education-card {
+    background-color: var(--color-background);
+    color: var(--color-textMain);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 4px 12px var(--color-secondary);
+  }
+  
+  .education-card h2,
+  .education-card h3 {
+    color: var(--color-highlight);
+  }
+  
+  .education-card:hover {
+    background-color: #121214;
+    /* background-color: var(--color-hover-bg); */
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 16px var(--color-primary), 0 0 6px var(--color-textLink);
+  }
+
+  .nav-text{
+    color:var(--color-textLink);
+  }
+
+  .nav-text:hover{
+    color:var(--color-nav-hover-red)
+  }
+  
+  @layer utilities {
+    /* Button Styles */
+    .btn {
+      @apply px-6 py-3 rounded-full font-semibold transition-all duration-300 inline-block text-center;
+      color: var(--btn-text-color);
+      box-shadow: var(--btn-shadow);
+    }
+  
+
+
+    /* New Buttons styles */
+
+    
+    .btn-go-down {
+      background: var(--color-highlight);
+      color: var(--color-background);
+      box-shadow: 0 4px 12px var(--color-highlight);
+    }
+    
+    .btn-go-down:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 6px 20px var(--color-highlight);
+    }
+
+
+    .btn-contact {
+      background: var(--color-secondary);
+      color: var(--btn-text-color);
+      box-shadow: 0 4px 16px rgba(255, 77, 0, 0.5);
+    }
+
+
+    .btn-download {
+      background: var(--color-primary);
+      color: var(--btn-text-color);
+      box-shadow: 0 4px 16px rgba(0, 255, 231, 0.5);
+    }
+
+
+    .btn-github {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(100, 100, 100, 0.2));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--color-textMain);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 255, 231, 0.2);
+      border-radius: 12px;
+      padding: 0.6rem 1.2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-github:hover {
+      background: linear-gradient(135deg, rgba(0, 255, 231, 0.3), rgba(0, 255, 200, 0.15));
+      box-shadow: 0 6px 24px rgba(0, 255, 231, 0.4);
+      color: white;
+    }
+
+
+
+    .btn-skill {
+      background-color: #1A1A1D;
+      border: 1px solid var(--color-primary);
+      color: var(--color-textMain);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    
+    .btn-skill.active {
+      background: var(--gradient);
+      color: var(--color-background);
+      box-shadow: 0 4px 16px var(--color-primary);
+      cursor: none;
+    }
+
+
+    .btn-submit {
+      background: var(--color-secondary);
+      color: var(--btn-text-color);
+      box-shadow: var(--btn-hover-shadow);
+      cursor: pointer;
+    }
+    
+    .btn-submit:hover{
+      background: var(--color-highlight);
+      color: var(--color-soft-teal-dark);
+      box-shadow: var(--btn-hover-shadow);
+      font-size: 25px;
+    }
+
+
+
+
+
+
+
+
+  
+    /* Typography & Layout */
+    .sub-heading {
+      @apply text-2xl font-semibold text-white;
+    }
+  
+    .text-secondary {
+      @apply text-center mb-12 max-w-2xl mx-auto mt-5 text-gray-300 text-base;
+    }
+  
+    .section-padding {
+      @apply px-5 md:px-10 md:mt-40 mt-20;
+    }
+  
+    /* Cards & Interactions */
+    .exp-card-wrapper {
+      @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
+    }
+  
+    .card-border {
+      @apply border border-black/50 bg-border relative overflow-hidden;
+    }
+  
+    .card-hover {
+      @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+    }
+  
+    .gradient-border {
+      @apply relative rounded-md;
+      background: var(--gradient);
+      background-clip: padding-box;
+      border: 1px solid transparent;
+    }
+  
+    /* Technology Grid */
+    .tech-card-animated-bg {
+      @apply absolute left-0 top-full w-full h-full bg-[#2D3240] group-hover:top-0 transition-all duration-700;
+    }
+  
+    .tech-card-content {
+      @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] relative z-10 group-hover:cursor-grab;
+    }
+  
+    .tech-card-content p {
+      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white/50 text-center;
+    }
+  
+    .tech-grid {
+      @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
+    }
+  
+    .tech-icon-wrapper {
+      @apply flex justify-center items-center w-52 h-60 relative;
+    }
+
+
+
+
+
+    /* Work */
+  /* .work-container {
+    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
+  }
+
+  .work-canvas {
+    @apply col-span-1 rounded-lg bg-surface border border-black/50;
+  }
+
+  .work-content {
+    @apply col-span-2 rounded-lg bg-surface border border-black/50;
+  }
+
+
+
+  .work-content_container {
+    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-surface rounded-lg sm:px-5 px-2.5;
+  }
+
+  .work-content_logo {
+    @apply rounded-3xl w-16 h-16 p-2 bg-surface;
+  }
+
+  .work-content_bar {
+    @apply flex-1 w-0.5 mt-4 h-full bg-surface group-hover:bg-soft-teal group-last:hidden;
+  } */
+
+
+    /* New Updated */
+  .work-container {
+    @apply grid lg:grid-cols-3 grid-cols-1 gap-6 mt-12;
+  }
+
+  .work-canvas {
+    @apply col-span-1 rounded-xl bg-surface border border-soft-teal-dark shadow-md;
+  }
+
+  .work-content {
+    @apply col-span-2 rounded-xl bg-surface border border-soft-teal-dark shadow-md;
+  }
+
+  .work-content_container {
+    /* group grid grid-cols-[auto_1fr]  */
+    @apply grid grid-cols-[auto_1fr]  hover:bg-soft-teal-dark items-start gap-4 transition-all duration-300 ease-in-out  rounded-xl p-4 cursor-pointer;
+  }
+
+  .work-content_logo {
+    @apply rounded-full w-16 h-16 p-2 bg-black/10 flex items-center justify-center;
+  }
+
+  .work-content_bar {
+    @apply flex-1 w-0.5 mt-4 h-full bg-soft-teal group-hover:bg-soft-teal group-last:hidden;
+  }
+
+  
+    /* Utility */
+    .text-link {
+      color: var(--color-textLink);
+    }
+  
+    .bg-primary {
+      background-color: var(--color-primary);
+    }
+  
+    .border-highlight {
+      border-color: var(--color-highlight);
+    }
+  
+    .container {
+      margin-inline: auto;
+      padding-inline: 2rem;
+  
+      @media (min-width: 640px) {
+        max-width: 640px;
+      }
+      @media (min-width: 768px) {
+        max-width: 768px;
+      }
+      @media (min-width: 1024px) {
+        max-width: 1024px;
+      }
+      @media (min-width: 1280px) {
+        max-width: 1280px;
+      }
+      @media (min-width: 1400px) {
+        max-width: 1400px;
+      }
+    }
+  }
+  
+  /* Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Card Effect */
+  .card {
+    --start: 0;
+    position: relative;
+    z-index: 40;
+    overflow: hidden;
+    transition: border-color 1s ease-in-out;
+  }
+  
+  .card::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: var(--gradient);
+    background-attachment: fixed;
+    mask: linear-gradient(#0000, #0000),
+      conic-gradient(
+        from calc((var(--start) - 15) * 1deg),
+        #ffffff1f 0deg,
+        white,
+        #ffffff00 100deg
+      );
+    mask-composite: intersect;
+    mask-clip: padding-box, border-box;
+    opacity: 0;
+    transition: 0.5s ease;
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  }
+
+
