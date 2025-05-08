@@ -17,7 +17,7 @@ const AboutSection = () => {
                     <a href="#contact" className="btn btn-contact">
                         Contact
                     </a>
-                    <a title="Download Resume"  target="_blank" rel="noopener noreferrer" className="btn btn-download">
+                    <a title="Download Resume" href={`${getPath()}/Resume.pdf`}  target="_blank" rel="noopener noreferrer" className="btn btn-download">
                         Download
                     </a>
                 </div>
