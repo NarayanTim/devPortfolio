@@ -75,12 +75,14 @@ const Project = () => {
                         
                     </div>
                     <div className="flex justify-between items-center mt-5">
-                        <button className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full" onClick={() => handleNavigation('previous')}>
-                            <Image width={0}  height={10}  className="w-4 h-4"  src={leftArrow.src} alt="left arrow" />
+                        {/* <button className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full " onClick={() => handleNavigation('previous')}> */}
+                        <button className="w-14 h-14 p-3 cursor-pointer active:scale-95 transition-all bg-blue-500 hover:bg-blue-600 rounded-full shadow-lg" onClick={() => handleNavigation('previous')}>
+                            <Image width={0}  height={0}  className="w-6 h-6 text-white "  src={leftArrow.src} alt="left arrow" />
                         </button>
 
-                        <button className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full" onClick={() => handleNavigation('next')}>
-                            <Image width={0}  height={0}  src={rightArrow.src} alt="right arrow" className="w-4 h-4" />
+                        {/* <button className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full" onClick={() => handleNavigation('next')}> */}
+                        <button className="w-14 h-14 p-3 cursor-pointer active:scale-95 transition-all bg-blue-500 hover:bg-blue-600 rounded-full shadow-lg" onClick={() => handleNavigation('next')}>
+                            <Image width={0}  height={0}  src={rightArrow.src} alt="right arrow" className="w-6 h-6 text-white" />
                         </button>
                     </div>
                 </div>
