@@ -17,11 +17,20 @@ const Video = ({videoSrc, videoName} : {videoSrc?:string, videoName?:string}) =>
 
 
 
+    // useEffect(() => {
+    //     if (videoRef.current) {
+    //         videoRef.current.load();
+    //     }
+    // }, [videoSrc]);
+
     useEffect(() => {
         if (videoRef.current) {
             videoRef.current.load();
+            if (isMobile) {
+                videoRef.current.pause();
+            }
         }
-    }, [videoSrc]);
+    }, [videoSrc, isMobile]);
 
 
     return (
