@@ -1,5 +1,5 @@
 import React from 'react'
-import { aboutMeData } from "../data/index"
+import { aboutMeData, uniqueAbout } from "../data/index"
 import AboutData from './AboutData';
 import { getPath } from '@/global';
 
@@ -8,9 +8,14 @@ const AboutSection = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
             <div className='space-y-6'> 
-                <h3 className='sub-heading'>passionate developer </h3>
+                <h3 className='sub-heading'>Passionate Developer</h3>
                 <p className="text-secondary">
                     {aboutMeData}
+                </p>
+
+                <h3 className='sub-heading'>Unique About Me</h3>
+                <p className="text-secondary">
+                    {uniqueAbout}
                 </p>
 
                 <div className='flex flex-col sm:flex-row gap-4 justify-center '>

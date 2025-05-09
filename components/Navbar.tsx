@@ -5,6 +5,7 @@ import {  cn } from "../data/utils"
 import { X, Menu } from 'lucide-react'
 import { logo } from '@/data/assets/tech'
 import Image from 'next/image'
+import { HiHome, HiUser, HiAcademicCap, HiCode, HiLightBulb, HiBriefcase, HiMail } from 'react-icons/hi';
 
 
 const navItems = [
@@ -16,6 +17,17 @@ const navItems = [
     {name: "Experience", href:"#experience"},
     {name: "Contact", href:"#contact"},
 ]
+
+
+const bottomNavbarItems = [
+  { href: "#hero", icon: <HiHome /> },
+  { href: "#about", icon: <HiUser /> },
+  { href: "#education", icon: <HiAcademicCap /> },
+  { href: "#skills", icon: <HiLightBulb /> },
+  { href: "#project", icon: <HiCode /> },
+  { href: "#experience", icon: <HiBriefcase /> },
+  { href: "#contact", icon: <HiMail /> },
+];
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState<boolean>(false)
@@ -54,6 +66,21 @@ const Navbar = () => {
 
                 <button aria-label={isMenuOpen ? "Close Menu" : "Open menu"} className='md:hidden p-2 text-metallic-blue z-50' onClick={() => SetIsMenuOpen((prev) => !prev)}>{isMenuOpen ? <X size={24}/> : <Menu size={24}/>}</button>
 
+
+                <div className="fixed bottom-0 left-0 w-full bg-surface flex justify-around items-center py-3 text-xl z-[100] lg:hidden">
+                    {bottomNavbarItems.map((item, index) => (
+                        <a
+                            key={index}
+                            href={item.href}
+                            onClick={() => SetIsMenuOpen(false)}
+                            className="text-primary "
+                            >
+                            {item.icon}
+                        </a>
+                    ))}
+                </div>
+
+
                 {/*  */}
                 <div className={cn("fixed inset-0 shadow-surface backdrop-blur-md z-40 flex flex-col items-center justify-center", 
                     "transition-all duration-300 md:hidden",
@@ -69,7 +96,12 @@ const Navbar = () => {
                             </a>
                         ))}
                     </div>
+
+
                 </div>
+
+
+
             </div>
         </nav>
     )

@@ -8,7 +8,7 @@
   
   --color-surface: #1A1A1D;
   
-  --color-hover-bg: #1D262D
+  --color-hover-bg: #1D262D;
   --color-primary: #00FFE7;             /* Vibrant neon cyan */
   --color-secondary: #FF4D00;           /* Bright alert orange */
   
@@ -83,7 +83,6 @@
   
   .education-card:hover {
     background-color: #121214;
-    /* background-color: var(--color-hover-bg); */
     border-color: var(--color-secondary);
     box-shadow: 0 0 16px var(--color-primary), 0 0 6px var(--color-textLink);
   }
@@ -129,7 +128,7 @@
 
 
     .btn-download {
-      background: var(--color-primary);
+      background: #00000066;
       color: var(--btn-text-color);
       box-shadow: 0 4px 16px rgba(0, 255, 231, 0.5);
     }
@@ -247,37 +246,6 @@
     .tech-icon-wrapper {
       @apply flex justify-center items-center w-52 h-60 relative;
     }
-
-
-
-
-
-    /* Work */
-  /* .work-container {
-    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
-  }
-
-  .work-canvas {
-    @apply col-span-1 rounded-lg bg-surface border border-black/50;
-  }
-
-  .work-content {
-    @apply col-span-2 rounded-lg bg-surface border border-black/50;
-  }
-
-
-
-  .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-surface rounded-lg sm:px-5 px-2.5;
-  }
-
-  .work-content_logo {
-    @apply rounded-3xl w-16 h-16 p-2 bg-surface;
-  }
-
-  .work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full bg-surface group-hover:bg-soft-teal group-last:hidden;
-  } */
 
 
     /* New Updated */

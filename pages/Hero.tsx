@@ -11,7 +11,6 @@ const Hero = () => {
     const isSmall:boolean = useMediaQuery({ maxWidth: 440 });
     const isMobile:boolean = useMediaQuery({ maxWidth: 768 });
     const isTablet:boolean = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
-    // Define a type for the sizes object to ensure all required keys are present
     type LogoSizes = {
         react: [number, number, number];
         python: [number, number, number];
@@ -36,7 +35,7 @@ const Hero = () => {
                     </h1>
                     <Logo sizes={sizes}/>
                     <p className='text-lg md:text-xl text-silver-glow-300 max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4'>
-                        I love creating immersive games and working on backend systems. With a Bachelor&#39;s degree in Computer Science&rsquo;I enjoy turning creative ideas into interactive experiences and solving complex problems through code.
+                        I love creating immersive games and working on backend systems. With a Bachelor&#39;s degree in Computer Science&#44; I enjoy turning creative ideas into interactive experiences and solving complex problems through code.
                     </p>
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4 xs:hidden">
                         <a href="#about" className="btn btn-go-down">

@@ -53,7 +53,7 @@ const CourseCard :  React.FC<Props> = ({course, expandedCourse, toggleCourseDesc
 
   return (
     <div
-      className={`border border-primary rounded-lg p-4 cursor-pointer transition-all duration-200 hover:bg-primary hover:border-primary ${
+      className={`border border-primary rounded-lg p-4 cursor-pointer transition-all duration-200 hover:bg-soft-teal-dark hover:border-primary ${
         expandedCourse === course.title ? 'col-span-full' : ''
       }`}
       onClick={() => toggleCourseDescription(course.title)}

@@ -167,6 +167,22 @@ export const education = [
       title: "Programming Embedded Microcontrollers in C and Assembly",
       description: "A hands-on course focusing on programming microcontrollers using C and assembly languages. Topics include low-level hardware programming, memory management, interrupt handling, and interfacing microcontrollers with sensors, actuators, and other hardware components in embedded systems.",
     },
+    {
+      title: "Artificial Intelligence",
+      description: "An introduction to artificial intelligence, covering topics like search algorithms, machine learning, and natural language processing.",
+    },
+    {
+      title: "Computer Graphics",
+      description: "This course covers the fundamentals of computer graphics, including rendering, and shading.",
+    },
+    {
+      title: "Operating Systems",
+      description: "An in-depth study of operating systems, focusing on processes, memory management, file systems, and system calls. The course covers how modern operating systems manage hardware resources and provide services to software applications, with hands-on experience in system programming and debugging.",
+    },
+    {
+      title: "Software Engineering",
+      description: "This course introduces the principles of software engineering, including requirements analysis, system design, testing, and project management. Students learn the software development lifecycle and best practices for building scalable, maintainable, and efficient software systems.",
+    },
 ];
 
 
@@ -188,11 +204,14 @@ export const dataBase = [
 
 
 export const aboutMeData = "I'm a passionate developer focusing on programming, game and web development, and a growing interest in artificial intelligence and machine learning."
+export const uniqueAbout = "I am a dedicated individual who successfully balances academics, work, and family responsibilities. I assist my parents with managing medical appointments, bills, and hospital visits, ensuring everything runs smoothly. This has honed my skills in time management, problem-solving, and adaptability, which I apply both personally and professionally."
+
+
 
 export const educationData = [
     {
         major : "Bachelor of Science in Computer Science",
-        school : "St.John Fisher University", 
+        school : "St. John Fisher University", 
         date : "Graduation: May 2025",
         courses : "Below are some of the courses I`ve taken during my educational journey"
     }
@@ -267,8 +286,6 @@ export const projects = [
         ],
     },
 
-    // desc: 'Collaborated with a team to develop Mercury Mobile, a dynamic and responsive MERN-stack web application.',
-    // sub_desc: 'Built full-stack features with custom UI frameworks, user-specific functionality, and Spiral SDLC methodology for organized development.',
 
     {
         title: 'Mercury Mobile',
