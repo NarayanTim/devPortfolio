@@ -21,7 +21,7 @@ const Contact = () => {
           I&apos;m actively seeking opportunities to contribute to meaningful projects, whether it&apos;s a full-time role or freelance work. If you&apos;re looking for someone with experience in game development, backend systems, or full-stack web development, I&apos;d love to connect and discuss how I can add value to your team or project.
         </p>
 
-        <div className="mt-5 relative flex items-center">
+        <div className="mt-5 relative flex items-center justify-center">
           <MainHTMButton
             title={copied ? "Email is Copied!" : "Copy my email address"}
             icon={<CopyCheckIcon />}

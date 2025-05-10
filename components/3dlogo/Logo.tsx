@@ -21,7 +21,6 @@ type Sizes = {
 
 
 const Logo = ({ sizes }: {sizes:Sizes }) => {
-  {console.log("Next Position is: " + sizes.next)}
   return (
     <div className="w-full h-full absolute inset-0">
     <Canvas className="w-full h-full">

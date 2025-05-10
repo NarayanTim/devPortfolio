@@ -32,10 +32,12 @@ const Skills = () => {
                     }
                 </div>
 
-                <div  className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 xl:gap-10 md:gap-8 gap-5 mt-16">
+                {/* <div  className="grid xl:grid-cols-5 md:grid-cols-4 grid-cols-2 xl:gap-10 md:gap-8 gap-5 mt-16">
                     <FilterCards type={activateSection}/>
+                </div> */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-5 mt-16">
+                    <FilterCards type={activateSection} />
                 </div>
-
 
             </div>
         </section>

@@ -48,8 +48,8 @@ const FilterCards = ({type="All"}:{type?:string}) => {
               scale: 1,
               x: 0,
               rotateZ: 0,
-              duration: 0.3,                  // Fast animation
-              delay: i * 0.03,                // Quick stagger
+              duration: 0.2,                  // Fast animation
+              delay: i * 0.02,                // Quick stagger
               ease: "power1.out",             // Snappy easing
               scrollTrigger: {
                 trigger: card,
@@ -70,13 +70,6 @@ const FilterCards = ({type="All"}:{type?:string}) => {
 
     return (
         <>
-
-
-            {/* {displayedComponents.map(({ Component, type }) => (
-                    <Component key={type} />
-                ))} */}
-
-
 
             {displayedComponents.map(({ Component, type }) => {
               try {

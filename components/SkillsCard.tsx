@@ -10,7 +10,7 @@ const SkillsCard = ({icon, title} : {icon : StaticImageData, title : string}) =>
             <div className='tech-card-animated-bg'/>
             <div className='tech-card-content'>
                 <div className='tech-icon-wrapper'>
-                    <Image width={0}  height={0}  src={icon} alt={title}/>
+                    <Image width={200} height={200}  src={icon} alt={title} className="object-contain w-full h-full"/>
                 </div>
                 <div className='px-5 md:px-10 w-full'>
                     <p className="">{title}</p>

@@ -1,6 +1,7 @@
+// const isProduction:boolean = false
 const isProduction:boolean = true
-const gitPath = "/devPortfolio"
 
+const gitPath = "/devPortfolio"
 export const getPath = () : string => {
     if(isProduction){
         return gitPath

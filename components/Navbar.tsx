@@ -67,20 +67,6 @@ const Navbar = () => {
                 <button aria-label={isMenuOpen ? "Close Menu" : "Open menu"} className='md:hidden p-2 text-metallic-blue z-50' onClick={() => SetIsMenuOpen((prev) => !prev)}>{isMenuOpen ? <X size={24}/> : <Menu size={24}/>}</button>
 
 
-                <div className="fixed bottom-0 left-0 w-full bg-surface flex justify-around items-center py-3 text-xl z-[100] lg:hidden">
-                    {bottomNavbarItems.map((item, index) => (
-                        <a
-                            key={index}
-                            href={item.href}
-                            onClick={() => SetIsMenuOpen(false)}
-                            className="text-primary "
-                            >
-                            {item.icon}
-                        </a>
-                    ))}
-                </div>
-
-
                 {/*  */}
                 <div className={cn("fixed inset-0 shadow-surface backdrop-blur-md z-40 flex flex-col items-center justify-center", 
                     "transition-all duration-300 md:hidden",
@@ -108,3 +94,19 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+
+// {/* Bottom Navbar below the footer */}
+//     <div className="fixed bottom-0 left-0 w-full bg-surface flex justify-around items-center py-3 text-xl z-[100] lg:hidden">
+//         {/* fixed bottom-0 left-0 w-full bg-surface flex justify-around items-center py-3 text-xl z-[100] lg:hidden */}
+//         {bottomNavbarItems.map((item, index) => (
+//             <a
+//                 key={index}
+//                 href={item.href}
+//                 onClick={() => SetIsMenuOpen(false)}
+//                 className="text-primary "
+//                 >
+//                 {item.icon}
+//             </a>
+//         ))}
+//     </div>
