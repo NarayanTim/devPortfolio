@@ -5,7 +5,6 @@ import {  cn } from "../data/utils"
 import { X, Menu } from 'lucide-react'
 import { logo } from '@/data/assets/tech'
 import Image from 'next/image'
-import { HiHome, HiUser, HiAcademicCap, HiCode, HiLightBulb, HiBriefcase, HiMail } from 'react-icons/hi';
 
 
 const navItems = [
@@ -19,15 +18,6 @@ const navItems = [
 ]
 
 
-const bottomNavbarItems = [
-  { href: "#hero", icon: <HiHome /> },
-  { href: "#about", icon: <HiUser /> },
-  { href: "#education", icon: <HiAcademicCap /> },
-  { href: "#skills", icon: <HiLightBulb /> },
-  { href: "#project", icon: <HiCode /> },
-  { href: "#experience", icon: <HiBriefcase /> },
-  { href: "#contact", icon: <HiMail /> },
-];
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState<boolean>(false)
