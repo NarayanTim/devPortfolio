@@ -5,6 +5,8 @@ import { linkedIn } from "./assets/tech/other"
 export const githubLink:string = "https://github.com/NarayanTim";
 export const LinkedInLink:string = "https://www.linkedin.com/in/laxmi-timsina-5b6a05261/";
 
+export const ResumeLink = "LaxmiTimsinaResume-Software.pdf"
+
 export const techSkills = [
     {
         title : "Python", 

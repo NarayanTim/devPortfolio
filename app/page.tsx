@@ -7,8 +7,6 @@ import Project from '@/pages/Project';
 import Education from '@/pages/Education';
 import Contact from '@/pages/Contact';
 import Footer from '@/pages/Footer';
-import Experience from './../pages/Experience';
-
 
 
 
@@ -23,7 +21,6 @@ export default function Home() {
             <Education />
             <Skills />
             <Project />
-            <Experience />
             <Contact />
           </main>
           <Footer/>

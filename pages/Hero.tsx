@@ -35,7 +35,7 @@ const Hero = () => {
                     </h1>
                     <Logo sizes={sizes}/>
                     <p className='text-lg md:text-xl text-silver-glow-300 max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4'>
-                        I enjoy building games and backend systems. With a background in Computer Science&#44; I like turning ideas into fun experiences and solving problems with code.
+                        Junior Developer | Eager to learn, adaptable, and ready to contribute to any project.
                     </p>
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4 xs:hidden">
                         <a href="#about" className="btn btn-go-down">

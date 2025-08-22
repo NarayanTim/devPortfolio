@@ -7,13 +7,25 @@ import { logo } from '@/data/assets/tech'
 import Image from 'next/image'
 
 
+
+// const navItems = [
+//     {name: "Home", href:"#hero"},
+//     {name: "About", href:"#about"},
+//     {name: "Education", href:"#education"},
+//     {name: "Skills", href:"#skills"},
+//     {name: "Project", href:"#project"},
+//     {name: "Experience", href:"#experience"},
+//     {name: "Contact", href:"#contact"},
+// ]
+
+
+
 const navItems = [
     {name: "Home", href:"#hero"},
     {name: "About", href:"#about"},
     {name: "Education", href:"#education"},
     {name: "Skills", href:"#skills"},
     {name: "Project", href:"#project"},
-    {name: "Experience", href:"#experience"},
     {name: "Contact", href:"#contact"},
 ]
 
